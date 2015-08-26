@@ -4,8 +4,6 @@
 }
 body {
   font-family: Tahoma, Geneva, sans-serif;
-  background-color: #1a1a1a;
-  color: #b3b3b3;
   }
   td, th, h3, input {
   font-family: Tahoma, Geneva, sans-serif;
@@ -144,4 +142,10 @@ a:link{
 }
 a:visited{
 	font-family: Montserrat, sans-serif;
+}
+.navbar-inner
+{
+	background-image: linear-gradient(to bottom,#C30C0C,#EA0F0F);
+	border: 1px solid #9F0908;
+	background-color: #9F0908;
 }
