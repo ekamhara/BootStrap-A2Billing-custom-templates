@@ -16,8 +16,8 @@
 			   <link href="templates/default/css/menu.css" rel="stylesheet" type="text/css">
 			   <link href="templates/default/css/style-def.css" rel="stylesheet" type="text/css">
 		{/if}
-        <link href="../common/css/bootstrap.css" rel="stylesheet">
-		<link href="../common/css/customization.css" rel="stylesheet">
+        <link href="templates/{$SKIN_NAME}/css/bootstrap.css" rel="stylesheet">
+		<link href="templates/{$SKIN_NAME}/css/customization.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css" rel="stylesheet">
 		<script type="text/javascript" src="./javascript/jquery/jquery-1.2.6.min.js"></script>
         
