@@ -42,7 +42,7 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="index.php">{$CCMAINTITLE}</a>
+					<a class="brand" href="index.php"><img src="css/logo_kurira.jpg" alt="Logo"/></a>
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			<input type="hidden" name="done" value="submit_log">
 			<div class="container">
 				<div class="hero-unit">
-					<h1>{php} echo gettext("AUTHENTICATION");{/php}</h1>
+					<h1>Welcome to Kurira.com!</h1>
 				</div>
 				{if ($error == 1)}
 				<div class="alert alert-error">

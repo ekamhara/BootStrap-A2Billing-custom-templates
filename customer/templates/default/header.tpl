@@ -26,6 +26,9 @@
 		var IMAGE_PATH = "templates/{$SKIN_NAME}/images/";
 	</script>
 	<script type="text/javascript" src="./javascript/jquery/jquery-1.2.6.min.js"></script>
+	<link href="templates/{$SKIN_NAME}/css/bootstrap.css" rel="stylesheet">
+	<link href="templates/{$SKIN_NAME}/css/customization.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css" rel="stylesheet">
 	<script type="text/javascript" src="./javascript/jquery/jquery.debug.js"></script>
 	<script type="text/javascript" src="./javascript/jquery/ilogger.js"></script>
 	<script type="text/javascript" src="./javascript/jquery/handler_jquery.js"></script>

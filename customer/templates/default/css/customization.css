@@ -148,4 +148,5 @@ a:visited{
 	background-image: linear-gradient(to bottom,#C30C0C,#EA0F0F);
 	border: 1px solid #9F0908;
 	background-color: #9F0908;
+	min-height: 90px;
 }
