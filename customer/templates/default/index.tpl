@@ -42,15 +42,15 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="index.php"><img src="css/logo_kurira.jpg" alt="Logo"/></a>
+					<a class="brand" href="index.php"><img src="templates/{$SKIN_NAME}/css/logo_kurira.jpg" alt="Logo"/></a>
 				</div>
 			</div>
 		</div>
 		<form name="form" method="POST" action="userinfo.php" onsubmit="return test()" class="form-horizontal">
 			<input type="hidden" name="done" value="submit_log">
-			<div class="container">
+			<div class="container spacetop" >
 				<div class="hero-unit">
-					<h1>Welcome to Kurira.com!</h1>
+					<h1>Welcome to Kurira.com</h1>
 				</div>
 				{if ($error == 1)}
 				<div class="alert alert-error">
