@@ -42,7 +42,7 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a class="brand" href="index.php"><img src="templates/{$SKIN_NAME}/css/logo_kurira.jpg" alt="Logo"/></a>
+					<a class="brand" href="index.php"><img src="templates/{$SKIN_NAME}/images/logo_kurira.jpg" alt="Logo"/></a>
 				</div>
 			</div>
 		</div>
