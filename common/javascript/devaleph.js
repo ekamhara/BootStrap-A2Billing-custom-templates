@@ -34,11 +34,11 @@ $('a.hide_help').css("visibility","hidden");
 $('table').filter('[name!="donotapplystyle"]').attr("class","table table-condensed");
 $('table').css("margin-bottom", '0px');
 $('div.msg_info').attr("class", 'alert alert-info');
-$('input.form_input_button').attr("class", 'btn btn-primary');
+$('input.form_input_button').attr("class", 'btn btn-default');
 $('select.form_input_select').css("width", "210px");
 $('textarea.form_input_textarea').css("width", "195px");
 $('textarea.form_input_text').css("width", "195px");
-$('a.cssbutton_big').attr("class", 'btn btn-primary');
+$('a.cssbutton_big').attr("class", 'btn btn-default');
 	
 if(pathname.indexOf(PP_ERROR) > -1)
     {
@@ -65,7 +65,7 @@ if(pathname.indexOf(SUPPORT) > -1)
 if(pathname.indexOf(USER_INFO) > -1)
     {
         $('[href="userinfo.php"]').parent().attr("class", "nav-header active");
-        $('[href="A2B_entity_card.php?atmenu=password&form_action=ask-edit&stitle=Personal+Information"]').attr("class", 'btn btn-primary');
+        $('[href="A2B_entity_card.php?atmenu=password&form_action=ask-edit&stitle=Personal+Information"]').attr("class", 'btn btn-success btn-large');
     }
 if(pathname.indexOf(ENTITY_PHONENUMBER) > -1)
     {
