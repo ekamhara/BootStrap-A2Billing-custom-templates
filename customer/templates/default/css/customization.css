@@ -160,6 +160,16 @@ input, textarea
 	border: none !important;
 	font-size: 12px !important;
 }
-.table th, .table td {
+.table th, .table td 
+{
 border-top: none !important;
-	}
+}
+.nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus 
+{
+	background-color: #DB0B0B !important;
+}
+.cssbutton {
+border: none !important; 
+background-color: transparent !important;
+font-size: 12px;
+}
