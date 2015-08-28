@@ -43,7 +43,7 @@ $('a.cssbutton_big').attr("class", 'btn btn-default');
 if(pathname.indexOf(PP_ERROR) > -1)
     {
         $('.login-border-center').attr("class", 'alert alert-error');
-        $('a').attr("class", 'btn btn-info');
+        //$('a').attr("class", 'btn btn-info');
     }
 if(pathname.indexOf(INDEX) > -1)
     {
