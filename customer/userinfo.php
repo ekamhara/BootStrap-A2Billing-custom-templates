@@ -94,81 +94,6 @@ $smarty->display('main.tpl');
 ?>
 
 <div>
-<div id="paymentoptions">
-<table style="width:80%;margin:0 auto;" cellspacing="0"  align="center" >
-    <?php
-    if ($A2B->config['epayment_method']['paypal_subscription_enabled']==1) {
-        $vat= $_SESSION['vat'];
-         $amount_subscribe = $A2B->config['epayment_method']['paypal_subscription_amount'];
-        ?>
-    <tr background="<?php echo Images_Path; ?>/background_cells.gif" >
-        <TD  valign="top" align="right" class="tableBodyRight"   >
-            <font size="2"><?php echo gettext("Click below to subscribe an automated refill : ");?> </font>
-        </TD>
-        <td class="tableBodyRight" >
-            <?php
-            $head_desc= $amount_subscribe." ".strtoupper(BASE_CURRENCY);
-             if($vat>0)$head_desc .= " + ".(($vat/100)*$amount_subscribe)." ".strtoupper(BASE_CURRENCY)." of ".gettext("VAT")."";
-             echo $head_desc;
-             echo " (".gettext("for each")." ".$A2B->config['epayment_method']['paypal_subscription_period_number']." ";
-             switch (strtoupper($A2B->config['epayment_method']['paypal_subscription_time_period'])) {
-             case "D": echo gettext("Days");
-                 ;
-                 break;
-             case "M": echo gettext("Months");
-                 break;
-             case "Y": echo gettext("Years");
-                 break;
-             default:
-                 break;
-             }
-             echo ")";
-           ?>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" colspan="2" class="tableBodyRight" >
-            <img src="<?php echo Images_Path ?>/payments_paypal.gif" />
-        </td>
-    </tr>
-
-    <?php
-        $desc = gettext("Automated refill")." ".$A2B->config['epayment_method']['paypal_subscription_amount']." ".strtoupper(BASE_CURRENCY);
-        if($vat>0)$desc .= " + ".(($vat/100)*$amount_subscribe)." ".strtoupper(BASE_CURRENCY)." of ".gettext("VAT");
-        $amount_subscribe = $amount_subscribe +(($vat/100)*$amount_subscribe);
-        $key = securitykey(EPAYMENT_TRANSACTION_KEY, $username."^".$_SESSION["card_id"]."^".$useralias."^".$creation_date);
-        $link= tep_href_link("A2B_recurring_payment.php?id=".$_SESSION["card_id"]."&key=".$key, '', 'SSL');
-        $link_return= tep_href_link("userinfo.php?subscribe=true", '', 'SSL');
-        $link_cancel= tep_href_link("userinfo.php?subscribe=false", '', 'SSL');
-    ?>
-
-    <tr>
-        <td align="center" colspan="2" class="tableBodyRight" >
-            <form name="_xclick" action="<?php echo PAYPAL_PAYMENT_URL?>" method="post">
-            <input type="hidden" name="cmd" value="_xclick-subscriptions">
-            <input type="hidden" name="business" value="<?php echo $A2B->config['epayment_method']['paypal_subscription_account']?>">
-            <input type="hidden" name="currency_code" value="<?php echo strtoupper(BASE_CURRENCY);?>">
-            <input type="hidden" name="no_shipping" value="1">
-            <input type="hidden" name="no_note" value="1">
-            <input type="hidden" name="notify_url" value="<?php echo $link?>">
-            <input type="hidden" name="return" value="<?php echo $link_return?>">
-            <input type="hidden" name="cancel_return" value="<?php echo $link_cancel?>">
-            <input type="hidden" name="item_name" value="<?php echo $desc?>">
-            <input type="hidden" name="a3" value="<?php echo $amount_subscribe?>">
-            <input type="hidden" name="p3" value="<?php echo $A2B->config['epayment_method']['paypal_subscription_period_number']?>">
-            <input type="hidden" name="t3" value="<?php echo $A2B->config['epayment_method']['paypal_subscription_time_period']?>">
-            <input type="hidden" name="src" value="1">
-            <input type="hidden" name="sra" value="1">
-            <input type="submit" class="form_input_button" value="<?php echo gettext("SUBSCRIPTION");?>">
-            </form>
-        </td>
-    </tr>
-    <?php } ?>
-</table>
-<?php } else { ?>
-<br></br><br></br>
-<?php } ?>
-</div>
 
 <table  class="tablebackgroundblue" align="center" >
 <tr>
@@ -245,10 +170,10 @@ $smarty->display('main.tpl');
 if (!empty($subscribe)) {
      if ($subscribe=="true") {
      ?>
-<div class="msg_success" style="width:70%;margin:0 auto;" ><?php echo gettext("Your subscription for an automique refill success"); ?>	</div>
+<div class="msg_success" style="width:70%;margin:0 auto;" ><?php echo gettext("Your subscription for an automique refill success"); ?>  </div>
 
 <?php } else { ?>
-    <div class="msg_error" style="width:70%;margin:0 auto;"><?php echo gettext("Your subscription for an automique refill faild"); ?>	</div>
+    <div class="msg_error" style="width:70%;margin:0 auto;"><?php echo gettext("Your subscription for an automique refill faild"); ?>   </div>
     <?php
    }
 }
@@ -303,7 +228,84 @@ if (!is_array($arr_purchase_amount)) {
         </td>
     </tr>
 </table>
+
 <br/>
+<table style="width:80%;margin:0 auto;" cellspacing="0"  align="center" >
+    <?php
+    if ($A2B->config['epayment_method']['paypal_subscription_enabled']==1) {
+        $vat= $_SESSION['vat'];
+         $amount_subscribe = $A2B->config['epayment_method']['paypal_subscription_amount'];
+        ?>
+    <tr background="<?php echo Images_Path; ?>/background_cells.gif" >
+        <TD  valign="top" align="right" class="tableBodyRight"   >
+            <font size="2"><?php echo gettext("Click below to subscribe an automated refill : ");?> </font>
+        </TD>
+        <td class="tableBodyRight" >
+            <?php
+            $head_desc= $amount_subscribe." ".strtoupper(BASE_CURRENCY);
+             if($vat>0)$head_desc .= " + ".(($vat/100)*$amount_subscribe)." ".strtoupper(BASE_CURRENCY)." of ".gettext("VAT")."";
+             echo $head_desc;
+             echo " (".gettext("for each")." ".$A2B->config['epayment_method']['paypal_subscription_period_number']." ";
+             switch (strtoupper($A2B->config['epayment_method']['paypal_subscription_time_period'])) {
+             case "D": echo gettext("Days");
+                 ;
+                 break;
+             case "M": echo gettext("Months");
+                 break;
+             case "Y": echo gettext("Years");
+                 break;
+             default:
+                 break;
+             }
+             echo ")";
+           ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2" class="tableBodyRight" >
+            <img src="<?php echo Images_Path ?>/payments_paypal.gif" />
+        </td>
+    </tr>
+
+    <?php
+        $desc = gettext("Automated refill")." ".$A2B->config['epayment_method']['paypal_subscription_amount']." ".strtoupper(BASE_CURRENCY);
+        if($vat>0)$desc .= " + ".(($vat/100)*$amount_subscribe)." ".strtoupper(BASE_CURRENCY)." of ".gettext("VAT");
+        $amount_subscribe = $amount_subscribe +(($vat/100)*$amount_subscribe);
+        $key = securitykey(EPAYMENT_TRANSACTION_KEY, $username."^".$_SESSION["card_id"]."^".$useralias."^".$creation_date);
+        $link= tep_href_link("A2B_recurring_payment.php?id=".$_SESSION["card_id"]."&key=".$key, '', 'SSL');
+        $link_return= tep_href_link("userinfo.php?subscribe=true", '', 'SSL');
+        $link_cancel= tep_href_link("userinfo.php?subscribe=false", '', 'SSL');
+    ?>
+
+    <tr>
+        <td align="center" colspan="2" class="tableBodyRight" >
+            <form name="_xclick" action="<?php echo PAYPAL_PAYMENT_URL?>" method="post">
+            <input type="hidden" name="cmd" value="_xclick-subscriptions">
+            <input type="hidden" name="business" value="<?php echo $A2B->config['epayment_method']['paypal_subscription_account']?>">
+            <input type="hidden" name="currency_code" value="<?php echo strtoupper(BASE_CURRENCY);?>">
+            <input type="hidden" name="no_shipping" value="1">
+            <input type="hidden" name="no_note" value="1">
+            <input type="hidden" name="notify_url" value="<?php echo $link?>">
+            <input type="hidden" name="return" value="<?php echo $link_return?>">
+            <input type="hidden" name="cancel_return" value="<?php echo $link_cancel?>">
+            <input type="hidden" name="item_name" value="<?php echo $desc?>">
+            <input type="hidden" name="a3" value="<?php echo $amount_subscribe?>">
+            <input type="hidden" name="p3" value="<?php echo $A2B->config['epayment_method']['paypal_subscription_period_number']?>">
+            <input type="hidden" name="t3" value="<?php echo $A2B->config['epayment_method']['paypal_subscription_time_period']?>">
+            <input type="hidden" name="src" value="1">
+            <input type="hidden" name="sra" value="1">
+            <input type="submit" class="form_input_button" value="<?php echo gettext("SUBSCRIPTION");?>">
+            </form>
+        </td>
+    </tr>
+
+    <?php } ?>
+</table>
+
+<?php } else { ?>
+<br></br><br></br>
+
+<?php } ?>
 </div>
 
 <?php
