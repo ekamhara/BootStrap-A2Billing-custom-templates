@@ -115,7 +115,7 @@
 					<hr>
 					<footer>
 						<p>
-							<div class="container">{$COPYRIGHT}</div>
+							<div class="container">Copyright (C) - <a href="http://www.kurira.com" alt="Kurira Site" target="_blank">Kurira.com</a></div>
 						</p>
 					</footer>
 			</div>

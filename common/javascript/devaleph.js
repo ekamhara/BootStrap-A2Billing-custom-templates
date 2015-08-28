@@ -65,7 +65,8 @@ if(pathname.indexOf(SUPPORT) > -1)
 if(pathname.indexOf(USER_INFO) > -1)
     {
         $('[href="userinfo.php"]').parent().attr("class", "nav-header active");
-        $('[href="A2B_entity_card.php?atmenu=password&form_action=ask-edit&stitle=Personal+Information"]').attr("class", 'btn btn-success btn-large');
+        $('[value="BUY NOW"]').attr("class", 'btn btn-success btn-large');
+        $('[href="A2B_entity_card.php?atmenu=password&form_action=ask-edit&stitle=Personal+Information"]').attr("class", 'btn btn-primary btn-large');
     }
 if(pathname.indexOf(ENTITY_PHONENUMBER) > -1)
     {

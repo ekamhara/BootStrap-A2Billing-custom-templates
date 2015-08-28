@@ -35,8 +35,8 @@ body {
 .form_head
 {
 	background-color: transparent !important;
-	font-family: Tahoma, Geneva, sans-serif;
-
+	color: #333333;
+	font-size: 14px;
 }
 .tableBodyRight
 {
@@ -116,7 +116,6 @@ input, textarea
 {
 	font-size: 16px;
 	color: #b3b3b3;
-	font-family: Montserrat, sans-serif;
 }
 .tableDivider {
 	background-color: transparent !important;
@@ -138,12 +137,6 @@ input, textarea
 {
 	background: transparent !important;
 }
-a:link{
-	font-family: Montserrat, sans-serif;
-}
-a:visited{
-	font-family: Montserrat, sans-serif;
-}
 .navbar-inner
 {
 	background-image: linear-gradient(to bottom,#DB0B0B,#DB0B0B);
@@ -154,4 +147,16 @@ a:visited{
 .spacetop
 {
 	margin-top: 30px;
+}
+.alert-info
+{
+	color: #db0b0b;
+    background-color: #F9FBF9;
+    border-color: #db0b0b;
+}
+.form_input_text
+{
+	color: #222222 !important;
+	border: none !important;
+	font-size: 12px !important;
 }
