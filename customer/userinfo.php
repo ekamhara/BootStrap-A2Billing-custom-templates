@@ -92,14 +92,30 @@ $username = $customer_info['username'];
 
 $smarty->display('main.tpl');
 ?>
+
 <div>
+<div id="epaymentdetails" class="span9">
+<?php
+if (!empty($subscribe)) {
+     if ($subscribe=="true") {
+     ?>
+<div class="msg_success" style="width:70%;margin:0 auto;" ><?php echo gettext("Your subscription for an automique refill success"); ?>  </div>
 
-
-
+<?php } else { ?>
+    <div class="msg_error" style="width:70%;margin:0 auto;"><?php echo gettext("Your subscription for an automique refill faild"); ?>   </div>
+    <?php
+   }
+}
+?>
 
 <?php if ($A2B->config["epayment_method"]['enable']) { ?>
+
 <br>
-<?php echo $PAYMENT_METHOD;?>
+
+<?php
+    echo $PAYMENT_METHOD;
+?>
+
 <table style="width:80%;margin:0 auto;" cellspacing="0"  align="center" >
     <tr background="<?php echo Images_Path; ?>/background_cells.gif" >
         <TD  valign="top" align="right" class="tableBodyRight"   >
@@ -179,6 +195,7 @@ if (!is_array($arr_purchase_amount)) {
             <img src="<?php echo Images_Path ?>/payments_paypal.gif" />
         </td>
     </tr>
+
     <?php
         $desc = gettext("Automated refill")." ".$A2B->config['epayment_method']['paypal_subscription_amount']." ".strtoupper(BASE_CURRENCY);
         if($vat>0)$desc .= " + ".(($vat/100)*$amount_subscribe)." ".strtoupper(BASE_CURRENCY)." of ".gettext("VAT");
@@ -188,6 +205,7 @@ if (!is_array($arr_purchase_amount)) {
         $link_return= tep_href_link("userinfo.php?subscribe=true", '', 'SSL');
         $link_cancel= tep_href_link("userinfo.php?subscribe=false", '', 'SSL');
     ?>
+
     <tr>
         <td align="center" colspan="2" class="tableBodyRight" >
             <form name="_xclick" action="<?php echo PAYPAL_PAYMENT_URL?>" method="post">
@@ -209,14 +227,16 @@ if (!is_array($arr_purchase_amount)) {
             </form>
         </td>
     </tr>
+
     <?php } ?>
 </table>
+
 <?php } else { ?>
 <br></br><br></br>
+
 <?php } ?>
-
-
-
+</div>
+<div id="customerdetails" class="span12">
 <table  class="tablebackgroundblue" align="center" >
 <tr>
     <td><img src="<?php echo KICON_PATH ?>/personal.gif" align="left" class="kikipic"/></td>
@@ -288,18 +308,8 @@ if (!is_array($arr_purchase_amount)) {
     </td>
 </tr>
 </table>
-<?php
-if (!empty($subscribe)) {
-     if ($subscribe=="true") {
-     ?>
-<div class="msg_success" style="width:70%;margin:0 auto;" ><?php echo gettext("Your subscription for an automique refill success"); ?>  </div>
-
-<?php } else { ?>
-    <div class="msg_error" style="width:70%;margin:0 auto;"><?php echo gettext("Your subscription for an automique refill faild"); ?>   </div>
-    <?php
-   }
-}
-?>
 </div>
+</div>
+
 <?php
 $smarty->display('footer.tpl');

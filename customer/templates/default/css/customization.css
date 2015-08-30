@@ -112,6 +112,11 @@ input, textarea
 	color: #FFFFFF;
 }
 */
+.fontstyle_006
+{
+	font-size: 15px;
+    color: #000000;
+}
 .error_message
 {
 	font-size: 16px;
@@ -162,18 +167,20 @@ input, textarea
 }
 .table th, .table td 
 {
-border-top: none !important;
+	border-top: none !important;
 }
 .nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus 
 {
 	background-color: #DB0B0B !important;
 }
-.cssbutton {
-border: none !important; 
-background-color: transparent !important;
-font-size: 12px;
+.cssbutton 
+{
+	border: none !important; 
+	background-color: transparent !important;
+	font-size: 12px;
 }
-.form_head_red {
+.form_head_red 
+{
 	color: #DB0B0B !important;
     font-size: 12px !important;
 }
