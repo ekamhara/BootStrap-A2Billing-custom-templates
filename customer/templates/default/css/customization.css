@@ -112,10 +112,15 @@ input, textarea
 	color: #FFFFFF;
 }
 */
+.bgcolor_021 
+{
+	background-color: transparent !important;
+}
 .fontstyle_006
 {
 	font-size: 15px;
     color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 .error_message
 {
