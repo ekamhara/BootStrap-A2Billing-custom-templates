@@ -173,3 +173,7 @@ border: none !important;
 background-color: transparent !important;
 font-size: 12px;
 }
+.form_head_red {
+	color: #DB0B0B !important;
+    font-size: 12px !important;
+}
