@@ -41,6 +41,7 @@ body {
 	background-color: transparent !important;
 	color: #333333;
 	font-size: 14px;
+	font-family: 'Lato', sans-serif;
 }
 .tableBodyRight
 {
@@ -103,6 +104,7 @@ input, textarea
 .fontstyle_002
 {
 	font-size: 15px;
+	font-family: 'Lato', sans-serif;
 }
 /*
 .fontstyle_003
@@ -119,12 +121,17 @@ input, textarea
 .bgcolor_021 
 {
 	background-color: transparent !important;
+
 }
 .fontstyle_006
 {
 	font-size: 15px;
     color: #000000;
     font-family: 'Lato', sans-serif;
+}
+.fontstyle_007
+{
+	font-family: 'Lato', sans-serif;
 }
 .error_message
 {
@@ -244,9 +251,18 @@ input, textarea
 	font-size: 14px;
 }
 .navbar .brand {
-padding: 0px 20px 20px;
+	padding: 0px 20px 20px;
 }
 .topmenuitem
 {
-	padding: 10px 10px 10px;
+	font-weight: normal;
+    padding-right: 15px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: normal;
+}
+.top-menu
+{
+	float: right;
+    padding: 25px 50px 0px;
 }
