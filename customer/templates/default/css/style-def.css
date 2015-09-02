@@ -6,24 +6,24 @@ select.icon-menu option {
 
 a:link {
    	font-family: 'Lato', sans-serif;
-	color: #005298;
+	color: #666666;
 	text-decoration: none;
 }
 
 a:visited {
    	font-family: 'Lato', sans-serif;
-	color: #005298;
+	color: #666666;
 	text-decoration: none;
 }
 
 a:active {
    	font-family: 'Lato', sans-serif;
-	color: #005298;
+	color: #666666;
 }
 
 a:hover {
    	font-family: 'Lato', sans-serif;
-	color: #3b60af;
+	color: #555555;
 	text-decoration: underline;
 }
 
