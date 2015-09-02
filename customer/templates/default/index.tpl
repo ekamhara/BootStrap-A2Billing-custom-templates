@@ -116,21 +116,20 @@
 					<footer>
 						<div id="footerlogin" class="footerlogin">
 					      <div class="container fixcontainer">
-					      	<div class="span12" style="firstfooter"> 
+					      	<div class="span12" class="firstfooter" style="margin-left:0px;"> 
 					        	<img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/comodo_secure.png" class="secureimg" alt="Comodo Secure">
 					        </div>
-					        <div class="span12" style="text-align:center;background-color:#E8E8E8;height:50px;"> 
+					        <div class="span12" class="secondfooter" style="margin:0px;"> 
+					        	<br>
 					        	<a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Terms of Use</a>
-					        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					            <a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Privacy Policy</a>
-					            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					        	<a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Privacy Policy</a>
 					            <a href="http://marina.wcukdev.co.uk/Nubiacom/web/about-us/" class="footeranchors">About Us</a>
 					            </ul>
 					        </div>
-					        <div class="span12 thirdfooter" style="height:50px;"> 
-					        	Copyright © 2015 Kurira. All Rights Reserved 
+					        <div class="span12 thirdfooter" style="height:50px;margin:0px;"> 
+					        	<span style="padding-right:30px;">Copyright © 2015 Kurira. All Rights Reserved </span>
 					        </div>
-					        <div class="span12" style="text-align:right;height:100px;"> 
+					        <div class="span12" style="text-align:right;height:100px;margin:0px;"> 
 					        	 <img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/footer-logo.png" style="secureimg" alt="Comodo Secure">
 					        </div>
 					      </div>
