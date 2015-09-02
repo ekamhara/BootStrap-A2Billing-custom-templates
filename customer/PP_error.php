@@ -35,7 +35,7 @@ include 'lib/customer.defines.php';
 
 include 'lib/customer.smarty.php';
 
-$smarty->display('header.tpl');
+$smarty->display('header-simple.tpl');
 session_destroy();
 getpost_ifset(array('c'));
 
@@ -80,4 +80,4 @@ $error["accessdenied"] = gettext("Sorry, you don't have access to this page !");
 
 <?php
 
-$smarty->display('footer.tpl');
+$smarty->display('footer-simple.tpl');
