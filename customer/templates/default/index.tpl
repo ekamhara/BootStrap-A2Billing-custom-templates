@@ -39,6 +39,7 @@
 			}
 			{/literal}
 		</script>
+		<div id="megacontainer">
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
@@ -113,10 +114,10 @@
 						{php} echo gettext("To sign up");{/php} <a href="signup.php"><span class="label label-info">{php} echo gettext("Click here");{/php}</span></a></a>
 					</div>
 					<footer>
-						<div id="footerlogin" class="footerlogin navbar-fixed-bottom">
+						<div id="footerlogin" class="footerlogin">
 					      <div class="container fixcontainer">
 					      	<div class="span12" style="firstfooter"> 
-					        	<img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/comodo_secure.png" style="secureimg" alt="Comodo Secure">
+					        	<img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/comodo_secure.png" class="secureimg" alt="Comodo Secure">
 					        </div>
 					        <div class="span12" style="text-align:center;background-color:#E8E8E8;height:50px;"> 
 					        	<a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Terms of Use</a>
@@ -147,3 +148,6 @@
 
 		</script>
 		{/literal}
+	</div>
+</body>
+</html>
