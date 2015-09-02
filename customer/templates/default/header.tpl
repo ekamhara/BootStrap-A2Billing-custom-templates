@@ -63,8 +63,8 @@
 				                {if $ACXNOTIFICATION >0 }
 				                <a href="A2B_notification.php?form_action=ask-edit" class="topmenuitem">{php} echo gettext("NOTIFICATION");{/php}</a>
 				                {/if}
-				                <a href="logout.php?logout=true" target="_top" class="topmenuitem">
-			                        <STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-off"></i>&nbsp;{php} echo gettext("LOGOUT");{/php}</STRONG> 
+				                <a href="logout.php?logout=true" target="_top" class="topmenuitem logout">
+			                        <STRONG>{php} echo gettext("LOGOUT");{/php}</STRONG> 
 			                    </a>
 
 							</div>

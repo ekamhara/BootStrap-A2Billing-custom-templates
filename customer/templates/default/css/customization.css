@@ -238,6 +238,7 @@ input, textarea
     margin-top: 15px !important;
     text-decoration: none !important;
     padding-right: 40px;
+    font-weight: normal;
 }
 .footeranchors:visited
 {
@@ -281,4 +282,9 @@ input, textarea
 }
 .#page-wrap #inside {
 padding-top: 25px;
+}
+.logout
+{
+	padding-left: 15px;
+	color: #db0b0b;
 }
