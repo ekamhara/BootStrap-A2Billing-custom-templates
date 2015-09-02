@@ -20,7 +20,7 @@
 		<link href="templates/{$SKIN_NAME}/css/customization.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css" rel="stylesheet">
 		<script type="text/javascript" src="./javascript/jquery/jquery-1.2.6.min.js"></script>
-        
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </HEAD>
 <body>
 		<script LANGUAGE="JavaScript">
@@ -112,11 +112,28 @@
 					<div class="well">
 						{php} echo gettext("To sign up");{/php} <a href="signup.php"><span class="label label-info">{php} echo gettext("Click here");{/php}</span></a></a>
 					</div>
-					<hr>
 					<footer>
-						<p>
-							<div class="container">Copyright (C) - <a href="http://www.kurira.com" alt="Kurira Site" target="_blank">Kurira.com</a></div>
-						</p>
+						<div id="footerlogin" class="footerlogin navbar-fixed-bottom">
+					      <div class="container fixcontainer">
+					      	<div class="span12" style="firstfooter"> 
+					        	<img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/comodo_secure.png" style="secureimg" alt="Comodo Secure">
+					        </div>
+					        <div class="span12" style="text-align:center;background-color:#E8E8E8;height:50px;"> 
+					        	<a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Terms of Use</a>
+					        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					            <a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Privacy Policy</a>
+					            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					            <a href="http://marina.wcukdev.co.uk/Nubiacom/web/about-us/" class="footeranchors">About Us</a>
+					            </ul>
+					        </div>
+					        <div class="span12 thirdfooter" style="height:50px;"> 
+					        	Copyright © 2015 Kurira. All Rights Reserved 
+					        </div>
+					        <div class="span12" style="text-align:right;height:100px;"> 
+					        	 <img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/footer-logo.png" style="secureimg" alt="Comodo Secure">
+					        </div>
+					      </div>
+					    </div>
 					</footer>
 			</div>
 		</div>

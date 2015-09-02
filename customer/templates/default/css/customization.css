@@ -3,11 +3,12 @@
   padding-top: 100px;
 }
 body {
-  font-family: Tahoma, Geneva, sans-serif;
-  }
+  font-family: 'Lato', sans-serif;
+  color: #666;
+ }
   td, th, h3, input {
-  font-family: Tahoma, Geneva, sans-serif;
-  	
+  font-family: 'Lato', sans-serif;
+  color: #666;
   }
  .hero-unit h1
  {
@@ -74,7 +75,7 @@ input, textarea
 {
 	background-color: #FFFFFF !important;
 	color: #222222 !important;
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .form_input_text
 {
@@ -120,7 +121,7 @@ input, textarea
 {
 	font-size: 15px;
     color: #000000;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 .error_message
 {
@@ -149,10 +150,12 @@ input, textarea
 }
 .navbar-inner
 {
-	background-image: linear-gradient(to bottom,#DB0B0B,#DB0B0B);
-	border: 1px solid #DB0B0B;
+	background-image: linear-gradient(to bottom,#FFFFFF,#FFFFFF);
+	border: 1px solid #F5F5F5;
 	background-color: #DB0B0B;
 	min-height: 90px;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
 }
 .spacetop
 {
@@ -188,4 +191,54 @@ input, textarea
 {
 	color: #DB0B0B !important;
     font-size: 12px !important;
+}
+.footerlogin
+{
+	padding-top: 15px;
+}
+.fixcontainer
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100px;
+}
+.firstfooter
+{
+	text-align:center;background-color:#F3F3F3;height:89px;margin-left:0px;width:100%;
+}
+.secureimg
+{
+	padding-top:15px;padding-bottom:15px;
+}
+.secondfooter
+{
+	text-align:center;background-color:#E8E8E8;height:50px;margin-left:0px;width:100%;
+}
+.footerlink
+{
+
+}
+.footeranchors
+{
+	font-family: 'Lato', sans-serif;
+    color: #666666;
+    font-size: 15px;
+    text-shadow: rgba(0, 0, 0, 0.00784314) 0px 0px 1px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+.footeranchors:visited
+{
+
+}
+.thirdfooter
+{
+	text-align:right;
+	color: #666;
+	float: right;
+	padding-right: 20px;
+	font-size: 14px;
+}
+.navbar .brand {
+padding: 0px 20px 20px;
 }
