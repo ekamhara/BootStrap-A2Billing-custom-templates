@@ -182,6 +182,7 @@ input, textarea
 	color: #222222 !important;
 	border: none !important;
 	font-size: 12px !important;
+	font-family: 'Lato', sans-serif !important;    
 }
 .table th, .table td 
 {
@@ -265,4 +266,7 @@ input, textarea
 {
 	float: right;
     padding: 25px 50px 0px;
+}
+.cssbutton {
+	font-family: 'Lato', sans-serif !important;
 }

@@ -35,6 +35,7 @@
 	<script language="javascript" type="text/javascript" src="./javascript/misc.js"></script>
 	<script language="javascript" type="text/javascript" src="./javascript/devaleph.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href="templates/{$SKIN_NAME}/css/customization.css" rel="stylesheet">
 </HEAD>
 
 <BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -59,6 +60,9 @@
 	                {if $ACXNOTIFICATION >0 }
 	                <a href="A2B_notification.php?form_action=ask-edit">{php} echo gettext("NOTIFICATION");{/php}</a>
 	                {/if}
+	                <a href="logout.php?logout=true" target="_top" style="padding-left: 10px;">
+                        <STRONG>&nbsp;&nbsp;{php} echo gettext("LOGOUT");{/php}</STRONG> 
+                    </a>
 
 				</div>
 			</div>
