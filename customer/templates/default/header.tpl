@@ -39,34 +39,39 @@
 </HEAD>
 
 <BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="index.php"><img src="templates/{$SKIN_NAME}/images/logo_kurira.jpg" alt="Logo"/></a>
-				<div id="menuitems" class="top-menu">
-					<a href="userinfo.php" class="topmenuitem">{php} echo gettext("ACCOUNT INFO");{/php}</a>
-					{if $ACXVOICEMAIL>0 }
-		                <a href="A2B_entity_voicemail.php" class="topmenuitem" class="topmenuitem">{php} echo gettext("VOICEMAIL");{/php}</a>
-		            {/if}
-		            {if $ACXCALL_HISTORY >0 }
-		              <a href="call-history.php">{php} echo gettext("CALL HISTORY");{/php}</a>
-		            {/if}
-		            {if $ACXPASSWORD>0 }
-	                <a href="A2B_entity_password.php?atmenu=password&form_action=ask-edit&stitle=Password" class="topmenuitem">{php} echo gettext("PASSWORD");{/php}</a>
-	                {/if}
-	                {if $ACXSUPPORT >0 }
-	                <a href="A2B_support.php">{php} echo gettext("SUPPORT");{/php}</a>
-	                {/if}
-	                {if $ACXNOTIFICATION >0 }
-	                <a href="A2B_notification.php?form_action=ask-edit" class="topmenuitem">{php} echo gettext("NOTIFICATION");{/php}</a>
-	                {/if}
-	                <a href="logout.php?logout=true" target="_top" class="topmenuitem">
-                        <STRONG>&nbsp;&nbsp;{php} echo gettext("LOGOUT");{/php}</STRONG> 
-                    </a>
+<div id="page-wrap" class="container">
+		<div class="row-fluid">
+    		<div class="span10">	
+				<div class="navbar navbar-fixed-top">
+					<div class="navbar-inner">
+						<div class="container">
+							<a class="brand" href="index.php"><img src="templates/{$SKIN_NAME}/images/logo_kurira.jpg" alt="Logo"/></a>
+							<div id="menuitems" class="top-menu">
+								<a href="userinfo.php" class="topmenuitem">{php} echo gettext("ACCOUNT INFO");{/php}</a>
+								{if $ACXVOICEMAIL>0 }
+					                <a href="A2B_entity_voicemail.php" class="topmenuitem" class="topmenuitem">{php} echo gettext("VOICEMAIL");{/php}</a>
+					            {/if}
+					            {if $ACXCALL_HISTORY >0 }
+					              <a href="call-history.php">{php} echo gettext("CALL HISTORY");{/php}</a>
+					            {/if}
+					            {if $ACXPASSWORD>0 }
+				                <a href="A2B_entity_password.php?atmenu=password&form_action=ask-edit&stitle=Password" class="topmenuitem">{php} echo gettext("PASSWORD");{/php}</a>
+				                {/if}
+				                {if $ACXSUPPORT >0 }
+				                <a href="A2B_support.php" class="topmenuitem">{php} echo gettext("SUPPORT");{/php}</a>
+				                {/if}
+				                {if $ACXNOTIFICATION >0 }
+				                <a href="A2B_notification.php?form_action=ask-edit" class="topmenuitem">{php} echo gettext("NOTIFICATION");{/php}</a>
+				                {/if}
+				                <a href="logout.php?logout=true" target="_top" class="topmenuitem">
+			                        <STRONG>&nbsp;&nbsp;{php} echo gettext("LOGOUT");{/php}</STRONG> 
+			                    </a>
 
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-<div id="page-wrap">
-	<div id="inside">
+		<div id="row-fluid">
+			<div class="span10">

@@ -116,10 +116,10 @@
 					<footer>
 						<div id="footerlogin" class="footerlogin">
 					      <div class="container fixcontainer">
-					      	<div class="span12" class="firstfooter" style="margin-left:0px;"> 
+					      	<div class="span12 firstfooter" style="margin-left:0px;"> 
 					        	<img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/comodo_secure.png" class="secureimg" alt="Comodo Secure">
 					        </div>
-					        <div class="span12" class="secondfooter" style="margin:0px;"> 
+					        <div class="span12 secondfooter" style="margin:0px;"> 
 					        	<br>
 					        	<a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Terms of Use</a>
 					        	<a href="http://marina.wcukdev.co.uk/Nubiacom/web/privacy-policy/" class="footeranchors">Privacy Policy</a>
@@ -130,7 +130,7 @@
 					        	<span style="padding-right:30px;">Copyright © 2015 Kurira. All Rights Reserved </span>
 					        </div>
 					        <div class="span12" style="text-align:right;height:100px;margin:0px;"> 
-					        	 <img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/footer-logo.png" style="secureimg" alt="Comodo Secure">
+					        	 <img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/footer-logo.png" style="padding-right: 20px;" alt="Comodo Secure">
 					        </div>
 					      </div>
 					    </div>

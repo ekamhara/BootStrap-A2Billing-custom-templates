@@ -275,3 +275,6 @@ input, textarea
 .cssbutton {
 	font-family: 'Lato', sans-serif !important;
 }
+.#page-wrap #inside {
+padding-top: 25px;
+}
