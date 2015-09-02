@@ -262,6 +262,10 @@ input, textarea
     font-size: 14px;
     font-weight: normal;
 }
+.topmenuitem:hover{
+	color: #db0b0b;
+}
+
 .top-menu
 {
 	float: right;

@@ -52,7 +52,7 @@
 					                <a href="A2B_entity_voicemail.php" class="topmenuitem" class="topmenuitem">{php} echo gettext("VOICEMAIL");{/php}</a>
 					            {/if}
 					            {if $ACXCALL_HISTORY >0 }
-					              <a href="call-history.php">{php} echo gettext("CALL HISTORY");{/php}</a>
+					              <a href="call-history.php" class="topmenuitem">{php} echo gettext("CALL HISTORY");{/php}</a>
 					            {/if}
 					            {if $ACXPASSWORD>0 }
 				                <a href="A2B_entity_password.php?atmenu=password&form_action=ask-edit&stitle=Password" class="topmenuitem">{php} echo gettext("PASSWORD");{/php}</a>
@@ -64,7 +64,7 @@
 				                <a href="A2B_notification.php?form_action=ask-edit" class="topmenuitem">{php} echo gettext("NOTIFICATION");{/php}</a>
 				                {/if}
 				                <a href="logout.php?logout=true" target="_top" class="topmenuitem">
-			                        <STRONG>&nbsp;&nbsp;{php} echo gettext("LOGOUT");{/php}</STRONG> 
+			                        <STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-off"></i>&nbsp;{php} echo gettext("LOGOUT");{/php}</STRONG> 
 			                    </a>
 
 							</div>

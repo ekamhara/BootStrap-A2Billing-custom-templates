@@ -6,7 +6,6 @@
 		<div class="row-fluid">
 				<div class="span10">
 							<div id="footerlogin" class="footerlogin">
-						      <div class="container fixcontainer">
 						      	<div class="span12 firstfooter" style="margin-left:0px;"> 
 						        	<img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/comodo_secure.png" class="secureimg" alt="Comodo Secure">
 						        </div>
@@ -23,8 +22,8 @@
 						        <div class="span12" style="text-align:right;height:100px;margin:0px;"> 
 						        	 <img src="http://marina.wcukdev.co.uk/Nubiacom/web/wp-content/themes/kurira-child/images/footer-logo.png" style="padding-right: 20px;" alt="Comodo Secure">
 						        </div>
-						      </div>
-						    </div>
+						      
+						   </div>
 				</div>
 			</div>
 	</div>
