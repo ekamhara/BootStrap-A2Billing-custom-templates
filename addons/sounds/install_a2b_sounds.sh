@@ -17,7 +17,7 @@ fi
 
 case $DIST in
     'DEBIAN')
-		ast_sound=/var/lib/asterisk/sounds
+		ast_sound=/usr/share/asterisk/sounds
 	;;
     'CENTOS')
 		ast_sound=/var/lib/asterisk/sounds

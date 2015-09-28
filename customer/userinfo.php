@@ -94,15 +94,86 @@ $smarty->display('main.tpl');
 ?>
 
 <div>
-<div id="epaymentdetails" class="span9">
+
+<table  class="tablebackgroundblue" align="center" >
+<tr>
+    <td><img src="<?php echo KICON_PATH ?>/personal.gif" align="left" class="kikipic"/></td>
+    <td width="50%"><font class="fontstyle_002">
+    <?php echo gettext("LAST NAME");?> :</font>  <font class="fontstyle_007"><?php echo $customer_info[2]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("FIRST NAME");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[3]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("EMAIL");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[10]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("PHONE");?> :</font><font class="fontstyle_007"> <?php echo $customer_info[9]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("FAX");?> :</font><font class="fontstyle_007"> <?php echo $customer_info[11]; ?></font>
+    </td>
+    <td width="50%">
+    <font class="fontstyle_002"><?php echo gettext("ADDRESS");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[4]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("ZIP CODE");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[8]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("CITY");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[5]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("STATE");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[6]; ?></font>
+    <br/><font class="fontstyle_002"><?php echo gettext("COUNTRY");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[7]; ?></font>
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td align="right">
+        &nbsp;
+    </td>
+    <td align="right">
+        <?php if (has_rights (ACX_PERSONALINFO)) { ?>
+        <a href="A2B_entity_card.php?atmenu=password&form_action=ask-edit&stitle=Personal+Information"><span class="cssbutton"><font color="red"><?php echo gettext("EDIT PERSONAL INFORMATION");?></font></span></a>
+        <?php } ?>
+    </td>
+</tr>
+</table>
+
+<br>
+<table style="width:70%;margin:0 auto;"  align="center" >
+<tr>
+    <td align="center">
+        <table width="80%" align="center" class="tablebackgroundcamel">
+        <tr>
+            <td></td>
+            <td width="50%">
+            <br><font class="fontstyle_002"><?php echo gettext("CARD NUMBER");?> :</font><font class="fontstyle_007"> <?php echo $customer_info[0]; ?></font>
+            <br><br>
+            </td>
+            <td width="50%">
+            <br><font class="fontstyle_002"><?php echo gettext("BALANCE REMAINING");?> :</font><font class="fontstyle_007"> <?php echo $credit_cur.' '.$customer_info[22]; ?> </font>
+            <br><br>
+            </td>
+            <?php
+                if ($customer_info[15] > 0) {
+                    $freetimetocall_used = $A2B->FT2C_used_seconds($DBHandle, $customer_info[21], $customer_info[20], $customer_info[18], $customer_info[19]);?>
+            </tr><tr><td /><td width="50%">
+            <font class="fontstyle_002"><?php echo gettext("CALLING PACKAGE");?> :</font><br><font class="fontstyle_007"> <?php echo $customer_info[16]; ?> </font>
+            </td>
+            <td width="50%">
+                <font class="fontstyle_002">
+                    <?php
+                    if (($customer_info[17]==0) || ($customer_info[17]==1)) {
+                        echo gettext("PACKAGE MINUTES REMAINING");?> :</font><br><font class="fontstyle_007"> <?php printf ("%d:%02d of %d:%02d",intval(($customer_info[15]-$freetimetocall_used) / 60),($customer_info[15]-$freetimetocall_used) % 60,intval($customer_info[15]/60),$customer_info[15] % 60);
+                    } else {
+                        echo gettext("PACKAGE MINUTES USED");?> :</font><br><font class="fontstyle_007"> <?php printf ("%d:%02d",intval($freetimetocall_used / 60),$freetimetocall_used % 60);
+                    }
+                    ?>
+                </font>
+            </tr><tr><td /><td width="50%" /><td width="50%" />
+            <?php }?>
+            <td valign="bottom" align="right"><img src="<?php echo KICON_PATH ?>/help_index.gif" class="kikipic"></td>
+        </tr>
+        </table>
+    </td>
+</tr>
+</table>
 <?php
 if (!empty($subscribe)) {
      if ($subscribe=="true") {
      ?>
-<div class="msg_success" style="width:70%;margin:0 auto;" ><?php echo gettext("Your subscription for an automique refill success"); ?>  </div>
+<div class="msg_success" style="width:70%;margin:0 auto;" ><?php echo gettext("Your subscription for an automique refill success"); ?>	</div>
 
 <?php } else { ?>
-    <div class="msg_error" style="width:70%;margin:0 auto;"><?php echo gettext("Your subscription for an automique refill faild"); ?>   </div>
+    <div class="msg_error" style="width:70%;margin:0 auto;"><?php echo gettext("Your subscription for an automique refill faild"); ?>	</div>
     <?php
    }
 }
@@ -235,80 +306,6 @@ if (!is_array($arr_purchase_amount)) {
 <br></br><br></br>
 
 <?php } ?>
-</div>
-<div id="customerdetails" class="span12">
-<table  class="tablebackgroundblue" align="center" >
-<tr>
-    <td><img src="<?php echo KICON_PATH ?>/personal.gif" align="left" class="kikipic"/></td>
-    <td width="50%"><font class="fontstyle_002">
-    <?php echo gettext("LAST NAME");?> :</font>  <font class="fontstyle_007"><?php echo $customer_info[2]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("FIRST NAME");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[3]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("EMAIL");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[10]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("PHONE");?> :</font><font class="fontstyle_007"> <?php echo $customer_info[9]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("FAX");?> :</font><font class="fontstyle_007"> <?php echo $customer_info[11]; ?></font>
-    </td>
-    <td width="50%">
-    <font class="fontstyle_002"><?php echo gettext("ADDRESS");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[4]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("ZIP CODE");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[8]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("CITY");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[5]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("STATE");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[6]; ?></font>
-    <br/><font class="fontstyle_002"><?php echo gettext("COUNTRY");?> :</font> <font class="fontstyle_007"><?php echo $customer_info[7]; ?></font>
-    </td>
-</tr>
-
-<tr>
-    <td></td>
-    <td align="right">
-        &nbsp;
-    </td>
-    <td align="right">
-        <?php if (has_rights (ACX_PERSONALINFO)) { ?>
-        <a href="A2B_entity_card.php?atmenu=password&form_action=ask-edit&stitle=Personal+Information"><span class="cssbutton"><font color="red"><?php echo gettext("EDIT PERSONAL INFORMATION");?></font></span></a>
-        <?php } ?>
-    </td>
-</tr>
-</table>
-
-<br>
-<table style="width:70%;margin:0 auto;"  align="center" >
-<tr>
-    <td align="center">
-        <table width="80%" align="center" class="tablebackgroundcamel">
-        <tr>
-            <td></td>
-            <td width="50%">
-            <br><font class="fontstyle_002"><?php echo gettext("CARD NUMBER");?> :</font><font class="fontstyle_007"> <?php echo $customer_info[0]; ?></font>
-            <br><br>
-            </td>
-            <td width="50%">
-            <br><font class="fontstyle_002"><?php echo gettext("BALANCE REMAINING");?> :</font><font class="fontstyle_007"> <?php echo $credit_cur.' '.$customer_info[22]; ?> </font>
-            <br><br>
-            </td>
-            <?php
-                if ($customer_info[15] > 0) {
-                    $freetimetocall_used = $A2B->FT2C_used_seconds($DBHandle, $customer_info[21], $customer_info[20], $customer_info[18], $customer_info[19]);?>
-            </tr><tr><td /><td width="50%">
-            <font class="fontstyle_002"><?php echo gettext("CALLING PACKAGE");?> :</font><br><font class="fontstyle_007"> <?php echo $customer_info[16]; ?> </font>
-            </td>
-            <td width="50%">
-                <font class="fontstyle_002">
-                    <?php
-                    if (($customer_info[17]==0) || ($customer_info[17]==1)) {
-                        echo gettext("PACKAGE MINUTES REMAINING");?> :</font><br><font class="fontstyle_007"> <?php printf ("%d:%02d of %d:%02d",intval(($customer_info[15]-$freetimetocall_used) / 60),($customer_info[15]-$freetimetocall_used) % 60,intval($customer_info[15]/60),$customer_info[15] % 60);
-                    } else {
-                        echo gettext("PACKAGE MINUTES USED");?> :</font><br><font class="fontstyle_007"> <?php printf ("%d:%02d",intval($freetimetocall_used / 60),$freetimetocall_used % 60);
-                    }
-                    ?>
-                </font>
-            </tr><tr><td /><td width="50%" /><td width="50%" />
-            <?php }?>
-            <td valign="bottom" align="right"><img src="<?php echo KICON_PATH ?>/help_index.gif" class="kikipic"></td>
-        </tr>
-        </table>
-    </td>
-</tr>
-</table>
-</div>
 </div>
 
 <?php

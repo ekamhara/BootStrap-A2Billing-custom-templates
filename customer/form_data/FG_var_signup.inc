@@ -155,6 +155,10 @@ if (LANGUAGE_ENABLE)  {
 $HD_Form->AddEditElement(gettext("LANGUAGE"), "language", "", "SELECT", "", "", "", "list", "", "", "", $language_list, "%1", "", "");
 $language_editFG = "language,";
 }
+if (CURRENCY_ENABLE)  {
+$HD_Form->AddEditElement("CURRENCY", "currency", "", "SELECT", "", "", "", "list", "", "", "", $currency_list, "%1", "", "");
+$currency_editFG = "currency,";
+}
 if (!$agent_conf && strpos($callPlan_idlist, ',') !== false && !($subscriber_signup>0)) {
 	$HD_Form->AddEditElement(gettext("CALL PLAN"), "tariff", "", "SELECT", "", "", "", "list", "", "", "", $callPlan_list, "%1", "", "");
 }
@@ -167,15 +171,6 @@ if (isset ($form_action) && $form_action == "ask-add") {
 	$comp_date_plus = "value='" . $begin_date_plus . $end_date . "'";
 	$comp_zero = "value='0'";
 }
-if (FIRSTNAME_ENABLE)  {
-$HD_Form->AddEditElement(gettext("FIRSTNAME"),
-		"firstname",
-		'$value',
-		"INPUT",
-		"size=30 maxlength=50", "11",
-		gettext("Insert your firstname"), "", "", "", "", "", "", "", "");
-$firstname_editFG = "firstname,";
-}
 if (LASTNAME_ENABLE)  {
 $HD_Form->AddEditElement(gettext("LASTNAME"),
 		"lastname",
@@ -184,6 +179,15 @@ $HD_Form->AddEditElement(gettext("LASTNAME"),
 		"size=30 maxlength=50", "11",
 		gettext("Insert your lastname"), "", "", "", "", "", "", "", "");
 $lastname_editFG = "lastname,";
+}
+if (FIRSTNAME_ENABLE)  {
+$HD_Form->AddEditElement(gettext("FIRSTNAME"),
+		"firstname",
+		'$value',
+		"INPUT",
+		"size=30 maxlength=50", "11",
+		gettext("Insert your firstname"), "", "", "", "", "", "", "", "");
+$firstname_editFG = "firstname,";
 }
 $HD_Form->AddEditElement(gettext("EMAIL"),
 		"email",
@@ -210,7 +214,7 @@ $HD_Form->AddEditElement(gettext("CITY"),
 $city_editFG = "city,";
 }
 if (STATE_ENABLE)  {
-$HD_Form->AddEditElement(gettext("COUNTY / STATE"),
+$HD_Form->AddEditElement(gettext("STATE/PROVINCE"),
 		"state",
 		'$value',
 		"INPUT",
@@ -219,11 +223,7 @@ $HD_Form->AddEditElement(gettext("COUNTY / STATE"),
 $state_editFG = "state,";
 }
 if ($form_action == 'ask-add') {
-	$country_default_val = 'GBR';
-}
-if (ZIPCODE_ENABLE)  {
-$HD_Form->AddEditElement(gettext("POSTCODE"), "zipcode", '$value', "INPUT", "size=30 maxlength=20", "0", gettext("Insert your zipcode"), "", "", "", "", "", "", "", "");
-$zipcode_editFG = "zipcode,";
+	$country_default_val = 'USA';
 }
 if (COUNTRY_ENABLE)  {
 $HD_Form->AddEditElement(gettext("COUNTRY"),
@@ -235,9 +235,9 @@ $HD_Form->AddEditElement(gettext("COUNTRY"),
 					"", "", "%1", "", "", "", '');
 $country_editFG = "country,";
 }
-if (CURRENCY_ENABLE)  {
-$HD_Form->AddEditElement("CURRENCY", "currency", "", "SELECT", "", "", "", "list", "", "", "", $currency_list, "%1", "", "");
-$currency_editFG = "currency,";
+if (ZIPCODE_ENABLE)  {
+$HD_Form->AddEditElement(gettext("ZIP/POSTAL CODE"), "zipcode", '$value', "INPUT", "size=30 maxlength=20", "0", gettext("Insert your zipcode"), "", "", "", "", "", "", "", "");
+$zipcode_editFG = "zipcode,";
 }
 $timezone_list = get_timezones();
 $one_select = false;
@@ -265,7 +265,7 @@ $HD_Form->AddEditElement(gettext("TIMEZONE"),
 $id_timezone_editFG = "id_timezone,";
 }
 if (PHONE_ENABLE)  {
-$HD_Form->AddEditElement(gettext("MOBILE NUMBER"),
+$HD_Form->AddEditElement(gettext("PHONENUMBER"),
 								"phone",
 								'$value',
 								"INPUT", "size=30 maxlength=20",
